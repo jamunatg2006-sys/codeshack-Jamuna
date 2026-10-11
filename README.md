@@ -1,80 +1,71 @@
-# Jamuna T G — Personal Portfolio
+# Jamuna T G — Personal Developer & AI Systems Portfolio
 
-Welcome to my personal developer and AI portfolio website! This project showcases my full-stack projects, open-source work (GSSoC), hackathon achievements, and college background in a clean and modern design.
+Welcome to my personal developer portfolio! I am **Jamuna T G**, an Information Science Engineering student at **Sir MVIT, Bengaluru** (2024–2028), full-stack engineer, AI systems builder, and open-source contributor.
 
----
-
-## 🛠️ Built With
-
-- **Next.js 16** (App Router)
-- **React 19** & **TypeScript**
-- **Tailwind CSS**
-- **Lucide Icons**
+This repository powers my modern portfolio website built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, and **Tailwind CSS**.
 
 ---
 
-## 🚀 How to Run Locally
+## What’s Inside This Portfolio?
+
+-  **Featured Engineering Projects**:
+  - **VendorRisk AI** — Third-party vendor cybersecurity assessment engine with 10-factor weighted scoring and automated compliance telemetry.
+  - **SILENT SOS** — Offline-first Progressive Web App (PWA) for emergency distress signaling with instant QR scanning.
+  - **CivicTrack** — AI-powered 50-to-1 civic complaint deduplication platform with 60% verification quorum (Top 10 SJBIT Hackathon).
+  - **AI-Based Spam Classifier**, **Sahidawa India**, **Spandana**, and more.
+-  **Open Source Milestones**: Dedicated showcase highlighting **GirlScript Summer of Code (GSSoC '24)** contributions, merged PRs, and **Nexus Summer of Code (NSOC)** work.
+-  **Agentic AI & RAG Interactive Lab**: Interactive ReAct reasoning loop visualizer demonstrating goal decomposition, tool execution, and synthesis.
+-  **ATS-Optimized Resume Viewer**: Clean 1-page resume modal built for recruiters, complete with quick print/save PDF support.
+-  **Growth Mindset & Problem Solving**: Interactive daily learning quote popup reflecting continuous DSA and algorithmic practice.
+-  **Adaptive Themes & Accessibility**: Dark and light modes, keyboard command palette (`Ctrl+K`), and accessible semantic structure.
+
+---
+
+## Built With
+
+- **Framework**: Next.js 16 (Turbopack, App Router)
+- **Language**: TypeScript & React 19
+- **Styling**: Tailwind CSS & Vanilla CSS Design Tokens
+- **Icons**: Lucide Icons & Custom SVG Social Icons
+- **Theme Provider**: `next-themes` (Dark / Light mode support)
+
+---
+
+## How to Run Locally
 
 1. **Install dependencies**:
    ```bash
    npm install
    ```
 
-2. **Start the local server**:
+2. **Start the local development server**:
    ```bash
    npm run dev
    ```
    Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-3. **Check for errors before pushing**:
+3. **Check for errors before committing or deploying**:
    ```bash
    npm run build
    ```
 
 ---
 
-## 📋 10 Simple Rules to Manage This Portfolio
+## Beyond the Code: A Little About Me
 
-Here are 10 easy rules to help you update, customize, and maintain this project without breaking anything:
-
-### 1. Update All Details in One File
-All your personal data, bio, links, and project information live in **one place**:
-`src/data/portfolioData.ts`. If you want to change any text or numbers, edit only this file.
-
-### 2. Updating Your Resume PDF
-To update your downloadable resume, just copy your latest resume file to:
-`public/resume.pdf`. The download buttons and print views will automatically use it.
-
-### 3. Adding Your Photos
-Profile and hero photos live inside the `public/images/` folder (`jamuna-hero.jpg` and `jamuna-about.jpg`). Keep the filenames the same to swap photos easily.
-
-### 4. LeetCode Button Shows a Learning Quote
-The LeetCode icon does not redirect to an external profile page. When visitors click it, it opens an inspiring popup showing that you are actively learning and solving problems daily.
-
-### 5. Contact Form Sends to Your Email
-The contact form uses FormSubmit to deliver messages straight to `jamunatg2006@gmail.com`. Visitors can also click the quick copy button to copy your email.
-
-### 6. Sir MVIT & Education Details
-Education is listed as **Sir M Visvesvaraya Institute of Technology (Sir MVIT), Bengaluru** (Information Science, 2024–2028). Keep this consistent across the resume and about sections.
-
-### 7. Dual Themes (Dark & Light Mode)
-The website includes automatic dark and light theme switching with the sun/moon button in the top navigation. Colors and contrast adjust automatically.
-
-### 8. Clean ATS-Friendly Resume Modal
-Clicking the "View Resume" button opens a 1-page ATS formatted resume matching your real resume sheet. Visitors can read it cleanly or click "Print / Save PDF".
-
-### 9. Always Test Before Pushing (`npm run build`)
-Before committing or pushing changes to GitHub, run `npm run build` in your terminal. If it builds with zero errors, your website is safe to deploy.
-
-### 10. Make Small, Meaningful Commits
-When saving your work to GitHub, commit in small, logical steps (for example: updating projects, fixing styles, or updating links) instead of committing everything at once.
+> **Hii, I’m Jamuna** — basically a girl with 99 interests, a 100 thoughts, and an endless urge to try everything at least once. 
+>
+> One night, I’m coding and debugging, overthinking life at 2 AM, and the next, I’m planning a trek, exploring new places, dancing like nobody’s watching, painting something, or learning a completely new skill. I love tech, hackathons, bike rides, concerts, music, rom-coms, and collecting little moments like I’m the main character in a coming-of-age movie.
+>
+> I’m an introvert, extrovert, or whatever the right people bring out of me. I love yapping with people, but I equally love my own company. A little chaotic, chronically curious, professional overthinker.Just trying to do everything
 
 ---
 
-## 📬 Contact & Connect
+## Contact & Connect
 
 - **Name:** Jamuna T G
 - **College:** Sir MVIT, Bengaluru
 - **Email:** [jamunatg2006@gmail.com](mailto:jamunatg2006@gmail.com)
+- **Phone:** [+91 8861162896](tel:+918861162896)
 - **GitHub:** [jamunatg2006-sys](https://github.com/jamunatg2006-sys)
 - **LinkedIn:** [Jamuna T G](https://linkedin.com/in/jamuna-t-g)
