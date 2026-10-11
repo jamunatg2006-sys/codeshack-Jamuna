@@ -15,8 +15,10 @@ import {
   Phone
 } from "lucide-react";
 import { LinkedinIcon, GithubIcon, LeetCodeIcon } from "./icons/SocialIcons";
+import { LeetCodeQuoteModal } from "./LeetCodeQuoteModal";
 
 export function ContactSection({ onOpenResumeModal }: { onOpenResumeModal?: () => void }) {
+  const [showLeetCodeModal, setShowLeetCodeModal] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -195,15 +197,15 @@ export function ContactSection({ onOpenResumeModal }: { onOpenResumeModal?: () =
                 </a>
 
                 {portfolioData.personal.leetcode && (
-                  <a
-                    href={portfolioData.personal.leetcode}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 hover:border-amber-500/40 text-slate-800 dark:text-slate-200 transition-colors"
+                  <button
+                    type="button"
+                    onClick={() => setShowLeetCodeModal(true)}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 hover:border-amber-500/40 text-slate-800 dark:text-slate-200 transition-colors cursor-pointer"
+                    title="Still Learning & Solving (Click to view quote)"
                   >
                     <LeetCodeIcon className="w-3.5 h-3.5 text-amber-500" />
                     LeetCode
-                  </a>
+                  </button>
                 )}
 
                 <button
@@ -367,6 +369,11 @@ export function ContactSection({ onOpenResumeModal }: { onOpenResumeModal?: () =
         </div>
 
       </div>
+
+      <LeetCodeQuoteModal
+        isOpen={showLeetCodeModal}
+        onClose={() => setShowLeetCodeModal(false)}
+      />
     </section>
   );
 }

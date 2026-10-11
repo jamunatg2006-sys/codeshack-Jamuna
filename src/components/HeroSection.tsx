@@ -21,9 +21,11 @@ import {
 } from "lucide-react";
 import { LinkedinIcon, GithubIcon, LeetCodeIcon } from "./icons/SocialIcons";
 import { portfolioData } from "@/data/portfolioData";
+import { LeetCodeQuoteModal } from "./LeetCodeQuoteModal";
 
 export function HeroSection({ onOpenResumeModal }: { onOpenResumeModal?: () => void }) {
   const [copiedCmd, setCopiedCmd] = useState(false);
+  const [showLeetCodeModal, setShowLeetCodeModal] = useState(false);
 
   const copyQuickCommand = () => {
     navigator.clipboard.writeText("npx jamuna-tg-portfolio@latest");
@@ -131,16 +133,15 @@ export function HeroSection({ onOpenResumeModal }: { onOpenResumeModal?: () => v
                 </a>
 
                 {portfolioData.personal.leetcode && (
-                  <a
-                    href={portfolioData.personal.leetcode}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 hover:text-amber-500 hover:border-amber-500/50 hover:shadow-md transition-all"
-                    aria-label="LeetCode Profile"
-                    title="LeetCode Profile"
+                  <button
+                    type="button"
+                    onClick={() => setShowLeetCodeModal(true)}
+                    className="p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 hover:text-amber-500 hover:border-amber-500/50 hover:shadow-md transition-all cursor-pointer"
+                    aria-label="Problem Solving Journey"
+                    title="Still Learning & Solving (Click to view quote)"
                   >
                     <LeetCodeIcon className="w-4 h-4 text-amber-500" />
-                  </a>
+                  </button>
                 )}
               </div>
             </div>
@@ -238,6 +239,11 @@ export function HeroSection({ onOpenResumeModal }: { onOpenResumeModal?: () => v
 
         </div>
       </div>
+
+      <LeetCodeQuoteModal
+        isOpen={showLeetCodeModal}
+        onClose={() => setShowLeetCodeModal(false)}
+      />
     </section>
   );
 }

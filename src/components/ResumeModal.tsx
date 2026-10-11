@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { portfolioData } from "@/data/portfolioData";
 import { 
   X, 
@@ -19,6 +19,7 @@ import {
   CheckCircle2
 } from "lucide-react";
 import { LinkedinIcon, GithubIcon, LeetCodeIcon } from "./icons/SocialIcons";
+import { LeetCodeQuoteModal } from "./LeetCodeQuoteModal";
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -27,6 +28,7 @@ interface ResumeModalProps {
 
 export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
   const resumeRef = useRef<HTMLDivElement>(null);
+  const [showLeetCodeModal, setShowLeetCodeModal] = useState(false);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -121,9 +123,14 @@ export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                   Git-Hub
                 </a>
                 <span>&bull;</span>
-                <a href="https://leetcode.com/u/Jamuna_TG/" target="_blank" rel="noopener noreferrer" className="hover:underline text-cyan-700">
+                <button
+                  type="button"
+                  onClick={() => setShowLeetCodeModal(true)}
+                  className="hover:underline text-cyan-700 cursor-pointer font-sans"
+                  title="Still learning & solving daily (Click to view quote)"
+                >
                   LeetCode
-                </a>
+                </button>
                 <span>&bull;</span>
                 <a href="tel:+918861162896" className="font-bold text-slate-900 hover:underline">
                   +91 8861162896
@@ -381,6 +388,11 @@ export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
         </div>
 
       </div>
+
+      <LeetCodeQuoteModal
+        isOpen={showLeetCodeModal}
+        onClose={() => setShowLeetCodeModal(false)}
+      />
     </div>
   );
 }
