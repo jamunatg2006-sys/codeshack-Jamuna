@@ -1,117 +1,80 @@
-# Jamuna T G — Personal Developer & AI Systems Portfolio
+# Jamuna T G — Personal Portfolio
 
-A personal developer portfolio designed and engineered for **Jamuna T G** — Full-Stack Engineer, AI/ML Developer, Agentic Systems Researcher, and Open Source Contributor.
-
-Built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, and **Tailwind CSS**.
+Welcome to my personal developer and AI portfolio website! This project showcases my full-stack projects, open-source work (GSSoC), hackathon achievements, and college background in a clean and modern design.
 
 ---
 
-## 🚀 Live Sections & Key Features
+## 🛠️ Built With
 
-1. **Hero Section**: Confident digital presence with direct CTAs, live availability indicator, interactive terminal telemetry deck, and social links (GitHub, LinkedIn, LeetCode).
-2. **About Me**: Engineering identity, curious builder ethos, and a real-time **Currently Exploring Radar** (Autonomous Agent Tool Orchestration, Multi-Vector RAG, Dual Backends).
-3. **Featured Projects Showcase**:
-   - **VendorRisk AI**: Dual-backend (Node.js Port 5001 + Python Flask) third-party cybersecurity posture platform with NVD CVE ingestion, 10-factor weighted scoring, and automated compliance reports.
-   - **SILENT SOS**: Offline-first QR emergency assistance Progressive Web App (PWA) with service workers and zero-install bystander scanning.
-   - **CivicTrack**: AI-powered 50-to-1 civic complaint aggregation platform with 60% verification quorum and Leaflet GPS heatmaps (SJBIT Hackathon Top 10 of 108 teams).
-   - **CodeShack ML Model**: Award-winning supervised ML predictive pipeline (2nd Place Winner).
-   - Plus **AbTalkAI** (RAG pipeline), **Sentinel AI** (Atria cybersecurity), **PhysioPath**, and **MediSyncAI**.
-4. **Agentic AI & RAG Research Lab**: Interactive deconstructed agent loop visualizer (Goal Decomposition &rarr; ReAct Reasoning &rarr; Tool Execution &rarr; Self-Reflection &rarr; Synthesis), architecture notes, and experiment benchmarks.
-5. **Technical Skills Matrix**: Curated engineering toolkit categorized by Languages, Frontend, Backend, Databases, AI/ML & Agents, and DevOps.
-6. **Open Source Showcase (Dedicated Tab & Section)**:
-   - GirlScript Summer of Code (GSSoC '26) highlight: **Global Rank #414 of 47,951 (Top 1% Worldwide)**, **3,123 PRs**, **650 Bounty Tasks**, **9,738 Points**, and **12 Badges**.
-   - Top contributions: `story-spark-ai`, `sahidawa-india` (78★, 322 forks), `VendorRisk-AI-Project`, `SILENT-SOS`, `neurovision`, `aegisai`.
-7. **Experience**: Professional timeline featuring the **ORNITECH** software engineering internship with company overview and deliverables.
-8. **Hackathons & Podium Milestones**: CodeShack 2nd place, SJBIT Top 10 finish, and inter-collegiate prototype sprints.
-9. **Interactive Overlays**:
-   - Deep-dive Project Architecture Modal with system specs and direct code repo links.
-   - Quick Command Palette (`Ctrl+K` or `Cmd+K`) for lightning-fast keyboard navigation.
-   - Dual Theme System: High-contrast midnight dark theme & clean editorial ivory light theme.
-   - Contact Form with honeypot spam protection, copyable email, direct telephone/WhatsApp link, and automatic mailto dispatch.
+- **Next.js 16** (App Router)
+- **React 19** & **TypeScript**
+- **Tailwind CSS**
+- **Lucide Icons**
 
 ---
 
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 16 (Turbopack, App Router)
-- **UI & Components**: React 19, TypeScript
-- **Styling**: Tailwind CSS, custom design tokens, dark & light themes
-- **Theme Provider**: `next-themes` (zero hydration mismatch)
-- **Icons**: Lucide Icons & Custom SVG Brand Icons
-
----
-
-## 💻 Getting Started Locally
+## 🚀 How to Run Locally
 
 1. **Install dependencies**:
    ```bash
    npm install
    ```
 
-2. **Run development server**:
+2. **Start the local server**:
    ```bash
    npm run dev
    ```
-   Open [http://localhost:3000](http://localhost:3000) (or whichever port is assigned) in your browser.
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-3. **Build for production**:
+3. **Check for errors before pushing**:
    ```bash
    npm run build
-   npm run start
    ```
 
 ---
 
-## 📝 How to Update Your Personal Data & Links
+## 📋 10 Simple Rules to Manage This Portfolio
 
-All portfolio content is centralized in **one single typed configuration file**:
-👉 [`src/data/portfolioData.ts`](file:///c:/Users/Jamuna%20T%20G/PORTFOLIO/src/data/portfolioData.ts)
+Here are 10 easy rules to help you update, customize, and maintain this project without breaking anything:
 
-You never need to edit UI components to change your information!
+### 1. Update All Details in One File
+All your personal data, bio, links, and project information live in **one place**:
+`src/data/portfolioData.ts`. If you want to change any text or numbers, edit only this file.
 
-### 1. Contact & Social Links
-Open `src/data/portfolioData.ts` and update:
-```ts
-email: "jamunatg2006@gmail.com",
-phone: "+91 98765 43210",              // Your phone or WhatsApp number
-github: "https://github.com/jamunatg2006-sys",
-linkedin: "https://linkedin.com/in/jamuna-t-g",
-leetcode: "https://leetcode.com/u/jamuna-tg", // Your LeetCode profile URL
-```
+### 2. Updating Your Resume PDF
+To update your downloadable resume, just copy your latest resume file to:
+`public/resume.pdf`. The download buttons and print views will automatically use it.
 
-### 2. Resume PDF
-Replace the file located at:
-`public/resume.pdf` with your real resume PDF. The website already links to `/resume.pdf` automatically!
+### 3. Adding Your Photos
+Profile and hero photos live inside the `public/images/` folder (`jamuna-hero.jpg` and `jamuna-about.jpg`). Keep the filenames the same to swap photos easily.
 
-### 3. ORNITECH Internship Description
-In `src/data/portfolioData.ts`, find the `experience` array:
-```ts
-{
-  id: "ornitech-internship",
-  role: "Software Engineering Intern",
-  organization: "ORNITECH",
-  companyOverview: "Technology solutions firm building digital platforms...",
-  period: "2024",
-  bullets: [
-    "Contributed to full-stack feature development...",
-    "Built modular components..."
-  ],
-  technologies: ["JavaScript", "React", "Node.js", "Git"]
-}
-```
+### 4. LeetCode Button Shows a Learning Quote
+The LeetCode icon does not redirect to an external profile page. When visitors click it, it opens an inspiring popup showing that you are actively learning and solving problems daily.
 
-### 4. Adding or Modifying Projects
-In `src/data/portfolioData.ts`, find the `projects` array. Simply add or update fields like `githubUrl`, `liveUrl`, `demoVideoUrl`, etc.
+### 5. Contact Form Sends to Your Email
+The contact form uses FormSubmit to deliver messages straight to `jamunatg2006@gmail.com`. Visitors can also click the quick copy button to copy your email.
+
+### 6. Sir MVIT & Education Details
+Education is listed as **Sir M Visvesvaraya Institute of Technology (Sir MVIT), Bengaluru** (Information Science, 2024–2028). Keep this consistent across the resume and about sections.
+
+### 7. Dual Themes (Dark & Light Mode)
+The website includes automatic dark and light theme switching with the sun/moon button in the top navigation. Colors and contrast adjust automatically.
+
+### 8. Clean ATS-Friendly Resume Modal
+Clicking the "View Resume" button opens a 1-page ATS formatted resume matching your real resume sheet. Visitors can read it cleanly or click "Print / Save PDF".
+
+### 9. Always Test Before Pushing (`npm run build`)
+Before committing or pushing changes to GitHub, run `npm run build` in your terminal. If it builds with zero errors, your website is safe to deploy.
+
+### 10. Make Small, Meaningful Commits
+When saving your work to GitHub, commit in small, logical steps (for example: updating projects, fixing styles, or updating links) instead of committing everything at once.
 
 ---
 
-## 🌐 Deploying to Vercel
+## 📬 Contact & Connect
 
-1. Push your repository to GitHub:
-   ```bash
-   git add .
-   git commit -m "feat: complete portfolio for Jamuna T G"
-   git push origin main
-   ```
-2. Go to [vercel.com](https://vercel.com) and import your repository.
-3. Vercel automatically detects Next.js. Click **Deploy**!
+- **Name:** Jamuna T G
+- **College:** Sir MVIT, Bengaluru
+- **Email:** [jamunatg2006@gmail.com](mailto:jamunatg2006@gmail.com)
+- **GitHub:** [jamunatg2006-sys](https://github.com/jamunatg2006-sys)
+- **LinkedIn:** [Jamuna T G](https://linkedin.com/in/jamuna-t-g)
