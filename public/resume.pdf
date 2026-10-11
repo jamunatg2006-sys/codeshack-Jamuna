@@ -1,0 +1,53 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 285 >>
+stream
+BT
+/F1 20 Tf
+50 730 Td
+(JAMUNA T G - SOFTWARE ENGINEER & BUILDER) Tj
+0 -30 Td
+/F1 12 Tf
+(Full-Stack Development | AI/ML | Agentic Workflows | Hackathon Winner) Tj
+0 -25 Td
+(Email: jamunatg2006@gmail.com | GitHub: github.com/jamunatg2006-sys) Tj
+0 -40 Td
+/F1 14 Tf
+(FEATURED WORK:) Tj
+0 -20 Td
+/F1 11 Tf
+(- VendorRisk AI: Dual-Backend Node/Python 10-Factor Cyber Posture Platform) Tj
+0 -18 Td
+(- SILENT SOS: Offline QR-Based Emergency Assistance PWA) Tj
+0 -18 Td
+(- CivicTrack: SJBIT Hackathon Top 10 Finalist Urban Governance MVP) Tj
+0 -18 Td
+(- CodeShack Machine Learning Predictive Model: 2nd Place Winner) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000244 00000 n 
+0000000580 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+659
+%%EOF
