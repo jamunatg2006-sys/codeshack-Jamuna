@@ -19,7 +19,11 @@ import {
   ArrowRight,
   GraduationCap,
   Trophy,
-  Code2
+  Code2,
+  Sparkles,
+  ShieldCheck,
+  Terminal,
+  Layers
 } from "lucide-react";
 import { portfolioData } from "@/data/portfolioData";
 
@@ -120,36 +124,130 @@ export function AboutSection() {
             </div>
           </div>
 
-          {/* Right Column: Story & Currently Exploring Radar */}
-          <div className="lg:col-span-7 space-y-6">
-            <div className="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed text-base sm:text-lg">
-              <p className="font-semibold text-slate-900 dark:text-white text-lg sm:text-xl leading-snug">
+          {/* Right Column: Creative Animated Story Pillars & Active Radar */}
+          <div className="lg:col-span-7 space-y-4">
+            
+            {/* Box 1: Academic & Systems Foundation */}
+            <div className="group relative rounded-2xl border border-slate-200/90 dark:border-slate-800/90 bg-white/95 dark:bg-[#0c1017]/95 p-5 sm:p-6 shadow-xs hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/5 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+              <div className="absolute -top-12 -right-12 w-28 h-28 bg-cyan-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+
+              <div className="flex items-center justify-between gap-2 mb-3">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-600 dark:text-cyan-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                    <GraduationCap className="w-4 h-4" />
+                  </div>
+                  <span className="font-mono text-xs font-bold uppercase tracking-wider text-cyan-700 dark:text-cyan-400">
+                    01 // FOUNDATION &amp; ACADEMIC IDENTITY
+                  </span>
+                </div>
+                <span className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-mono text-[11px] font-semibold bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 border border-cyan-500/20">
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse" />
+                  Sir MVIT &bull; CGPA 9.2
+                </span>
+              </div>
+
+              <p className="text-slate-800 dark:text-slate-200 text-sm sm:text-base leading-relaxed font-medium">
                 I am an Information Science undergraduate at Sir M. Visvesvaraya Institute of Technology (Sir MVIT), Bengaluru, who thrives at the intersection of full-stack systems engineering and applied artificial intelligence.
               </p>
-              
-              <p>
+
+              <div className="mt-3.5 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex flex-wrap items-center gap-2 text-[11px] font-mono">
+                <span className="px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 font-semibold">
+                  Sir MVIT Bengaluru
+                </span>
+                <span className="px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300">
+                  Information Science (2024&ndash;2028)
+                </span>
+                <span className="px-2.5 py-0.5 rounded-md bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 border border-cyan-500/20 font-semibold">
+                  Full-Stack + AI
+                </span>
+              </div>
+            </div>
+
+            {/* Box 2: Beyond Surface Interfaces (Deep Technical Architecture) */}
+            <div className="group relative rounded-2xl border border-slate-200/90 dark:border-slate-800/90 bg-white/95 dark:bg-[#0c1017]/95 p-5 sm:p-6 shadow-xs hover:border-indigo-500/50 hover:shadow-xl hover:shadow-indigo-500/5 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+              <div className="absolute -top-12 -right-12 w-28 h-28 bg-indigo-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+
+              <div className="flex items-center justify-between gap-2 mb-3">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                    <Cpu className="w-4 h-4" />
+                  </div>
+                  <span className="font-mono text-xs font-bold uppercase tracking-wider text-indigo-700 dark:text-indigo-400">
+                    02 // BEYOND SURFACE INTERFACES
+                  </span>
+                </div>
+                <div className="flex items-center gap-1.5" title="Active Systems Telemetry">
+                  <span className="w-2 h-2 rounded-full bg-rose-500/70" />
+                  <span className="w-2 h-2 rounded-full bg-amber-500/70" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-500/70" />
+                </div>
+              </div>
+
+              <p className="text-slate-800 dark:text-slate-200 text-sm sm:text-base leading-relaxed font-medium">
                 I don&apos;t just build surface interfaces; I architect robust backend APIs, implement multi-factor risk algorithms, wire up live vulnerability feeds, and orchestrate intelligent agent loops.
               </p>
 
-              <p>
-                Whether it&apos;s building working MVPs under pressure, developing offline-first QR emergency PWAs for accessible assistance, or contributing 35+ merged PRs across open-source programs (GSSoC &amp; NSoC), my philosophy is simple: <strong className="text-slate-900 dark:text-white">understand the core problem, choose the right architecture, and ship with meticulous attention to detail.</strong>
-              </p>
+              <div className="mt-3.5 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex flex-wrap items-center gap-2 text-[11px] font-mono">
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 border border-cyan-500/20 font-semibold">
+                  <Terminal className="w-3 h-3 text-cyan-500" />
+                  Robust Backend APIs
+                </span>
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border border-indigo-500/20 font-semibold">
+                  <ShieldCheck className="w-3 h-3 text-indigo-500" />
+                  Multi-Factor Risk Models
+                </span>
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/20 font-semibold">
+                  <Radio className="w-3 h-3 text-amber-500" />
+                  Live CVE Feeds
+                </span>
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20 font-semibold">
+                  <Workflow className="w-3 h-3 text-emerald-500" />
+                  ReAct Agent Loops
+                </span>
+              </div>
             </div>
 
-            {/* Quick Badges */}
-            <div className="pt-2 flex flex-wrap gap-2.5 font-mono text-xs">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-700 dark:text-cyan-300 font-semibold">
-                <GraduationCap className="w-4 h-4 text-cyan-500" />
-                Sir MVIT, Bengaluru (CGPA 9.2)
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-300 font-semibold">
-                <Trophy className="w-4 h-4 text-emerald-500" />
-                GSSoC Verified (9,718 Pts)
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-500/10 border border-indigo-500/30 text-indigo-700 dark:text-indigo-300 font-semibold">
-                <Code2 className="w-4 h-4 text-indigo-500" />
-                Full-Stack &amp; AI Builder
-              </span>
+            {/* Box 3: Core Philosophy & Execution */}
+            <div className="group relative rounded-2xl border border-slate-200/90 dark:border-slate-800/90 bg-white/95 dark:bg-[#0c1017]/95 p-5 sm:p-6 shadow-xs hover:border-emerald-500/50 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+              <div className="absolute -top-12 -right-12 w-28 h-28 bg-emerald-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+
+              <div className="flex items-center justify-between gap-2 mb-3">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                    <Sparkles className="w-4 h-4" />
+                  </div>
+                  <span className="font-mono text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
+                    03 // CORE PHILOSOPHY &amp; EXECUTION
+                  </span>
+                </div>
+                <span className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-mono text-[11px] font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20">
+                  <Trophy className="w-3 h-3 text-emerald-500" />
+                  GSSoC + NSoC Verified
+                </span>
+              </div>
+
+              <p className="text-slate-800 dark:text-slate-200 text-sm sm:text-base leading-relaxed font-medium">
+                Whether it&apos;s building working MVPs under pressure, developing offline-first QR emergency PWAs for accessible assistance, or contributing 35+ merged PRs across open-source programs (GSSoC &amp; NSoC), my philosophy is simple: <strong className="text-slate-950 dark:text-white font-bold">understand the core problem, choose the right architecture, and ship with meticulous attention to detail.</strong>
+              </p>
+
+              <div className="mt-3.5 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex flex-wrap items-center gap-2 text-[11px] font-mono">
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/20 font-semibold">
+                  <Flame className="w-3 h-3 text-amber-500" />
+                  Rapid Working MVPs
+                </span>
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 border border-cyan-500/20 font-semibold">
+                  <Layers className="w-3 h-3 text-cyan-500" />
+                  Offline-First QR PWAs
+                </span>
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20 font-semibold">
+                  <GitBranch className="w-3 h-3 text-emerald-500" />
+                  35+ Merged PRs
+                </span>
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-purple-500/10 text-purple-700 dark:text-purple-300 border border-purple-500/20 font-semibold">
+                  <Zap className="w-3 h-3 text-purple-500" />
+                  Meticulous Execution
+                </span>
+              </div>
             </div>
 
             {/* Live Radar Box */}
