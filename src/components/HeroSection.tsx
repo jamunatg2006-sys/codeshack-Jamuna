@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { 
@@ -26,6 +26,42 @@ import { LeetCodeQuoteModal } from "./LeetCodeQuoteModal";
 export function HeroSection({ onOpenResumeModal }: { onOpenResumeModal?: () => void }) {
   const [copiedCmd, setCopiedCmd] = useState(false);
   const [showLeetCodeModal, setShowLeetCodeModal] = useState(false);
+
+  // Typewriter effect for name
+  const fullName = portfolioData.personal.name;
+  const [typedName, setTypedName] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    if (isPaused) return;
+
+    let timeout: NodeJS.Timeout;
+
+    if (!isDeleting && typedName === fullName) {
+      // Hold the fully typed name for 3.5 seconds
+      timeout = setTimeout(() => {
+        setIsDeleting(true);
+      }, 3500);
+    } else if (isDeleting && typedName === "") {
+      // Brief pause when completely erased before typing again
+      timeout = setTimeout(() => {
+        setIsDeleting(false);
+      }, 500);
+    } else {
+      // Type or erase character
+      const speed = isDeleting ? 55 : 115;
+      timeout = setTimeout(() => {
+        setTypedName((prev) =>
+          isDeleting
+            ? fullName.substring(0, prev.length - 1)
+            : fullName.substring(0, prev.length + 1)
+        );
+      }, speed);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [typedName, isDeleting, fullName, isPaused]);
 
   const copyQuickCommand = () => {
     navigator.clipboard.writeText("npx jamuna-tg-portfolio@latest");
@@ -72,11 +108,25 @@ export function HeroSection({ onOpenResumeModal }: { onOpenResumeModal?: () => v
                 <span>Sir MVIT Bengaluru &bull; Information Science &bull; Full-Stack &amp; AI Builder</span>
               </div>
               
-              <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.04] font-heading">
-                I&apos;m{" "}
-                <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-sky-500 to-indigo-600 dark:from-cyan-300 dark:via-sky-300 dark:to-indigo-300">
-                  Jamuna T G
-                  <span className="absolute bottom-1.5 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded-full opacity-70" />
+              <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.06] font-heading">
+                <span>I&apos;m</span>{" "}
+                <span
+                  className="relative inline-flex items-baseline cursor-default select-none"
+                  onMouseEnter={() => setIsPaused(true)}
+                  onMouseLeave={() => setIsPaused(false)}
+                >
+                  <span className="sr-only">{fullName}</span>
+                  <span
+                    aria-hidden="true"
+                    className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-sky-500 to-indigo-600 dark:from-cyan-300 dark:via-sky-300 dark:to-indigo-300 font-black tracking-tight"
+                  >
+                    {typedName || "\u00A0"}
+                  </span>
+                  {/* Blinking Cyan Terminal Caret */}
+                  <span
+                    aria-hidden="true"
+                    className="inline-block w-[3px] sm:w-[4px] md:w-[5px] h-[0.82em] ml-1 sm:ml-1.5 bg-gradient-to-b from-cyan-400 to-sky-500 dark:from-cyan-300 dark:to-indigo-400 rounded-xs animate-pulse align-middle shadow-[0_0_12px_rgba(6,182,212,0.85)]"
+                  />
                 </span>
               </h1>
               
